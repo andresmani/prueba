@@ -1,0 +1,17 @@
+<%= simple_form_for([@curso,@estudiante ], :html => { :multipart => true, :remote => true, :class => 'form-horizontal' }) do |f| %>
+
+  <%= f.error_notification %>
+  
+  <%= f.input :imagen %>
+  <%= f.input :nombre, :label => "Nombre"  %>
+  <%= f.input :apellido, :label => "Apellido" %>
+  <%= f.input :cedula, :label => "Cedula"  %>
+  <%= f.input :telefono, :label => "Telefono"  %>
+  <%= f.input :email, :label => "Email"  %>
+  <%= f.input :direccion, :label => "Direccion"  %>
+  <br>
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', curso_estudiantes_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>

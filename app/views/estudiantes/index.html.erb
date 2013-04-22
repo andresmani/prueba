@@ -1,0 +1,48 @@
+<%- model_class = Estudiante -%>
+  <div class="page-header">
+   <br><br><br>
+ <center><h1>Estudiantes del curso <%= @curso.nombre %></h1></center>
+ <br>
+
+  <%= form_tag request.path, :method => 'get' do %>
+    Datos a Buscar:
+    <div class="input-append">
+      <%= search_field_tag :search, params[:search], :placeholder => "nombre, cedula, direccion, email" %>
+      <%= submit_tag "Consultar", :class => "btn btn-inverse ", :name => nil %>
+    </div>
+    <p>numero de registros
+   <p><%= text_field_tag :registro, params[:registro], options={:class=>"span1"} %></p>
+   <%= hidden_field_tag :direction, params[:direction] %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+    <% end %>
+    <br>
+</div>
+  <table class="table table-hover table-bordered table-condensed pretty ">
+      <th><%= sortable "nombre" %></th>
+      <th><%= sortable "apellido" %></th>
+      <th><%= sortable "cedula","Documento" %></th>
+      <th><%= sortable "telefono","Telefono" %></th>
+      <th><%= sortable "email" %></th>
+      <th><%= sortable "direccion" %></th>
+      <th><%= sortable "curso_id","Curso" %></th>
+  <th>Acciones</th>
+</tr>
+
+
+        </thead>
+        <tbody>
+          <%= render @estudiantes %>
+        </tbody>
+      </table>
+      <tr>
+        <td><%= link_to "Nuevo Estudiante", new_curso_estudiante_path, :class=>"btn btn-primary btn-mini",:remote => true %> </td>
+        <td><%= link_to "Curso", cursos_path , :class => 'btn btn-mini btn-inverse' %></td>
+      </tr>
+  
+    <div class="pagination pagination-centered">
+    <ul>
+    <%= will_paginate @estudiantes, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+    &raquo;' %>
+  </ul>
+    <td>Total estudiantes: <%=@estudiantes.total_entries %> </td>
+  </div>

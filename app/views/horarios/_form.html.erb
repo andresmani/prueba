@@ -1,0 +1,29 @@
+<%= simple_form_for(@horario, :html => { :class => 'form-horizontal' }, :remote => true) do |f| %>
+
+  <%= f.error_notification %>
+
+  <%= f.input :dia, as: :date, start_year: Date.today.year - 50, end_year: Date.today.year - 0, accept_day: true, order: [:day, :month, :year] %>
+  <%= f.input :hora,:class=>"input-mini", :label => "Hora" %>
+
+  <%= f.input :aula, collection:["aula1","aula2","aula3"] %>
+  
+  <!-- lixbox dependientes -->
+  <%= f.label :materia_id  %>
+  <%= f.collection_select :materia_id, Materia.all, :id, :nombre %><br><br>
+  
+  <%= f.label :instructor_id %>
+  <%= f.collection_select :instructor_id, Instructor.all, :id, :nombre %><br><br>
+
+  <%= f.label :curso_id %>
+  <%= f.collection_select :curso_id, Curso.all, :id, :nombre %><br>
+  
+
+  <div class="form-actions">
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    <%= link_to 'Atras', horarios_path, :class => 'btn btn-small' %>
+  </div>
+<% end %>
+
+
+
+

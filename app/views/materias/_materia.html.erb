@@ -1,0 +1,16 @@
+<tr id=<%= "materia_#{materia.id}" %>>
+  <td><%= materia.nombre %></td>
+  <td><%= materia.curso.nombre %></td>
+  <td>
+    <%= link_to 'Mostrar', materia, :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Editar', edit_materia_path(materia), :remote => true, :class => 'btn btn-mini' %>
+    <%= link_to 'Eliminar', materia, 
+        :data => { :confirm => 'Esta Seguro?' },
+        :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
+  </td>
+  <td><%= link_to 'Instructores',
+   materia_instructores_path(materia), :class=>"btn btn-inverse" %></td>
+</tr>
+
+
+ 

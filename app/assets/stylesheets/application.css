@@ -1,0 +1,69 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ *= require lazybox
+*/
+
+#lazybox div.team { max-width: 500px; }
+
+.lazybox {
+  background: transparent !important;
+}
+
+#lazybox_close.img {
+  background: url('cerrar.gif') no-repeat;
+  width: 25px;
+  height: 25px;
+  top: -17px;
+  right: -17px;
+}
+
+#lazybox.sticker {
+  -webkit-border-bottom-left-radius: 20px 500px;
+  -webkit-border-bottom-right-radius: 500px 30px;
+  -webkit-border-top-right-radius: 5px 100px;
+  -moz-border-radius-bottomleft: 20px 500px;
+  -moz-border-radius-bottomright: 500px 30px;
+  -moz-border-radius-topright: 5px 100px;
+  border-radius-bottomleft: 20px 500px;
+  border-radius-bottomright: 500px 30px;
+  border-radius-topright: 5px 100px;
+  border-bottom-left-radius: 20px 500px;
+  border-bottom-right-radius: 500px 30px;
+  border-top-right-radius: 5px 100px;
+}
+
+#lazybox.top {
+  border-radius: 0px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+}
+
+#lazybox.player {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+.pretty th .current {
+  padding-right: 12px;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+.pretty th .asc {
+  background-image: url('up_arrow.gif');
+}
+
+.pretty th .desc {
+  background-image: url('down-arrow.gif');
+}

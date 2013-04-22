@@ -1,0 +1,47 @@
+<%- model_class = Horario -%>
+<div class="page-header">
+   <br>
+  <br>
+  <center><h1>Horarios</h1></center>
+  <%= form_tag request.path, :method => 'get' do %>
+    Datos a Buscar:
+    <div class="input-append">
+      <%= search_field_tag :search,params[:search], option ={:class=>"span2", :placeholder => "dia, aula"} %>
+      <%= submit_tag "Consultar", :class => "btn btn-inverse", :nombre => nil %>
+    </div>  
+    <p>numero de registros:
+   <p><%= text_field_tag :registro, params[:registro], options={:class=>"span1"} %></p>
+    <%= hidden_field_tag :direction, params[:direction] %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+    <% end %>
+</div>
+<table class="table table-striped table-bordered table-condensed pretty">
+  <thead>
+    <tr>
+      <th><%= sortable "dia" %></th>
+      <th><%= sortable "hora" %></th>
+      <th><%= sortable "aula" %></th>
+      <th><%= sortable "materia" %></th>
+      <th><%= sortable "instructor" %></th>
+      <th><%= sortable "curso" %></th>
+    <th>Acciones</th> 
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @horarios %>
+  </tbody>
+</table>
+<tr>
+  <td><%= link_to 'Nuevo Horario', new_horario_path, :class => "btn btn-primary btn-mini", :remote => true %></td>
+</tr>
+<div class="pagination pagination-centered">
+  <ul>
+    <%= will_paginate @horarios, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+    &raquo;' %>
+  </ul>
+  <p>
+    <td>Total Horarios :<input type="text"  id="totalregs" class="span1" value="<%= @horarios.total_entries %>" readonly />
+
+  </p>
+</div>
+

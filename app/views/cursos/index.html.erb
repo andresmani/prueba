@@ -1,0 +1,50 @@
+<%- model_class = Curso -%>
+<div class="page-header">
+  <br>
+  <br>
+  <center><h1>Cursos</h1></center>
+    <%= form_tag request.path, :method => 'get' do %>
+      Datos a Buscar:
+    <div class="input-append">
+      <%= search_field_tag :search, params[:search], options ={ :class=>"span2", :placeholder => "Curso, ficha"} %>
+      <%= submit_tag "Consultar", :class => "btn btn-inverse", :nombre => nil %>
+    </div>
+     <p>numero de registros:
+   <p><%= text_field_tag :registro, params[:registro], options={:class=>"span1"} %></p>
+    <%= hidden_field_tag :direction, params[:direction] %>
+  <%= hidden_field_tag :sort, params[:sort] %>
+    <% end %>
+    <br>
+</div>
+
+<table class="table table-hover table-bordered table-condensed pretty">
+  <thead>
+    <tr>
+      <th><%= sortable "ficha" %></th>
+      <th><%= sortable "nombre","Curso" %></th>
+      <th> Acciones </th>
+    </tr>
+  </thead>
+  <tbody>
+     <%= render @cursos %>
+  </tbody>
+  <tfoot>
+  </tfoot>
+</table>
+    <tr>
+      <td><%= link_to 'Nuevo Curso', new_curso_path, :class => "btn btn-primary btn-mini", :remote => true %></td>
+    </tr>
+<br />
+<br />
+<div class="pagination pagination-centered">
+  <ul>
+    <%= will_paginate @cursos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
+    &raquo;' %>
+  </ul>
+  <p >
+  <td>Total Cursos :<input type="text"  id="totalregs" class="span1" value="<%= @cursos.total_entries %>" readonly />
+</p>
+</div>
+
+
+

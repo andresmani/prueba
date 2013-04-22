@@ -1,0 +1,30 @@
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: trabajo_development
+  pool: 5
+  username: postgres
+  password: 323921
+  host: localhost
+  port: 5432
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: trabajo_test
+  pool: 5
+  username: postgres
+  password: 323921
+  host: localhost
+  port: 5432
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: trabajo_production
+  pool: 5
+  username: postgres
+  password: 323921
+  host: localhost
+  port: 5432
