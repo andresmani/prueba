@@ -32,13 +32,31 @@ class EstudiantesController < ApplicationController
   end
 
   def create
-      @estudiante = @curso.estudiante.build(params[:estudiante])
-      render :action => :new unless @estudiante.save
-      @estudiantes =Estudiante.all
-  end
+     @estudiante = @curso.estudiante.new(params[:estudiante])
+
+   respond_to do |format|
+     if @estudiante.save
+       format.html { redirect_to curso_estudiantes_path, notice: 'Instructor Ingresado.' }
+       format.json { render json: @estudiante, status: :created, location: @estudiante }
+     else
+       format.html { render action: "new" }
+       format.json { render json: @estudiante.errors, status: :unprocessable_entity }
+     end
+   end
+ end
 
   def update
-    render :action => :edit unless @estudiante.update_attributes(params[:estudiante])
+    @estudiante = Estudiante.find(params[:id])
+
+   respond_to do |format|
+     if @estudiante.update_attributes(params[:estudiante])
+       format.html { redirect_to curso_estudiantes_path }
+       format.json { head :no_content }
+     else
+       format.html { render action: "edit" }
+       format.json { render json: @estudiante.errors, status: :unprocessable_entity }
+     end
+   end
   end
 
   def destroy

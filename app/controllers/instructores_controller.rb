@@ -28,14 +28,32 @@ class InstructoresController < ApplicationController
   end
 
   def create
-      @instructor = @materia.instructor.build(params[:instructor])
-      render :action => :new unless @instructor.save
-      @instructores = Instructor.all
-  end
+   @instructor = @materia.instructor.new(params[:instructor])
+
+   respond_to do |format|
+     if @instructor.save
+       format.html { redirect_to materia_instructores_path, notice: 'Instructor Ingresado.' }
+       format.json { render json: @instructor, status: :created, location: @instructor }
+     else
+       format.html { render action: "new" }
+       format.json { render json: @instructor.errors, status: :unprocessable_entity }
+     end
+   end
+ end
 
    def update
-      render :action => :edit unless @instructor.update_attributes(params[:instructor])
-  end
+   @instructor = Instructor.find(params[:id])
+
+   respond_to do |format|
+     if @instructor.update_attributes(params[:instructor])
+       format.html { redirect_to materia_instructores_path }
+       format.json { head :no_content }
+     else
+       format.html { render action: "edit" }
+       format.json { render json: @instructor.errors, status: :unprocessable_entity }
+     end
+   end
+ end
 
   def destroy
       @instructor = Instructor.find(params[:id])

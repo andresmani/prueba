@@ -1,4 +1,5 @@
 <tr id=<%= "estudiante_#{estudiante.id}" %>>
+  <td><%= image_tag estudiante.imagen.url(:lsmall) %></td>
   <td><%= estudiante.nombre %></td>
   <td><%= estudiante.apellido %></td>
   <td><%= estudiante.cedula %></td>
