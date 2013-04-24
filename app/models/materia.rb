@@ -3,7 +3,7 @@ class Materia < ActiveRecord::Base
 	validates :nombre, :presence => true,
 	  :length => { :minimum =>3, :maximum => 20 }
 
-   has_many :instructor, :dependent => :destroy
+   has_many :instructores, :dependent => :destroy
    has_many :horarios, :dependent => :destroy
    belongs_to :curso
 

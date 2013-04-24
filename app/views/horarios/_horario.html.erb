@@ -8,8 +8,10 @@
   <td>
 
     <%= link_to 'Mostrar', horario, :remote => true, :class => 'btn btn-mini' %>
+
     <%= link_to 'Editar', edit_horario_path(horario), :remote => true,
         :class => 'btn btn-mini' %>
+        
     <%= link_to 'Eliminar', horario, 
         :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>

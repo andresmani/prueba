@@ -18,7 +18,7 @@ class HorariosController < ApplicationController
 
 
   def show
-      @horario = Horario.find(params[:id])
+      @horario = Horario.find(params[:id])   
 
       respond_to do |format|
         format.pdf do

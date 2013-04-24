@@ -2,20 +2,20 @@ Guia3::Application.routes.draw do
   get "pages/index"
 
     resources :cursos do
-    resources :estudiantes
+    resources :estudiantes 
   end
 
     resources :materias do
     resources :instructores
   end
 
-
+  resources :horarios, :pdf
 
   get "pages/index"
     resources :cursos
     resources :materias
     resources :pages
-    resources :horarios
+    
   root :to => 'pages#index'
   
 
