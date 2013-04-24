@@ -1,2 +1,2 @@
 aplicacion echa en ROR con rvm vercion 2.0.0 y rails vercion 3.2.13 con las tablas cursos, estudiantes, horarios, 
-instructores y materias. sin colavoradores.
+instructores y materias. sin colavoradores. y mas 
