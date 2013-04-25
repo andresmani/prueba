@@ -8,13 +8,13 @@
   <%= f.input :aula, collection:["aula1","aula2","aula3"] %>
   
   <!-- lixbox dependientes -->
-  <%= f.label :materia_id  %>
+  <%= f.label :materia  %>
   <%= f.collection_select :materia_id, Materia.all, :id, :nombre %><br><br>
   
-  <%= f.label :instructor_id %>
+  <%= f.label :instructor %>
   <%= f.collection_select :instructor_id, Instructor.all, :id, :nombre %><br><br>
 
-  <%= f.label :curso_id %>
+  <%= f.label :curso %>
   <%= f.collection_select :curso_id, Curso.all, :id, :nombre %><br>
   
 

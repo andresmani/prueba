@@ -9,13 +9,13 @@ Guia3::Application.routes.draw do
     resources :instructores
   end
 
-  resources :horarios, :pdf
+  
 
   get "pages/index"
     resources :cursos
     resources :materias
     resources :pages
-    
+    resources :horarios, :pdf
   root :to => 'pages#index'
   
 
