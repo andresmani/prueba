@@ -67,3 +67,17 @@
 .pretty th .desc {
   background-image: url('down-arrow.gif');
 }
+
+#pos{
+  width:400px;
+  padding-left: 230%;
+  margin-top: 3%;
+}
+
+#top{
+  margin-top: 6%;
+}
+ 
+#msg{
+  margin-top: 2%
+} 

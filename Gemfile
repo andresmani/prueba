@@ -11,7 +11,7 @@ gem 'coffee-rails', '~> 3.2.1'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', :platforms => :ruby
 gem 'json'
-gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem 'twitter-bootstrap-rails'
 gem 'uglifier', '>= 1.0.3'
 gem 'will_paginate'
@@ -23,3 +23,8 @@ gem 'simple_form'
 gem 'lazybox'
 gem 'prawn'
 gem 'paperclip'
+gem 'remotipart'
+gem 'sorcery'
+gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'cancan'
+gem 'rolify'

@@ -1,0 +1,53 @@
+commit bb834fdb5b12dc89f3898ba368670db751d2d21b
+Author: Andres Echeverri <andresecheverr@misena.edu.co>
+Date:   Wed Apr 24 21:59:30 2013 -0500
+
+    agregando un aimagen a images
+
+commit a3f6a0138b36545060a9ef55d3e3dbd0b546d332
+Author: Andres Echeverri <andresecheverr@misena.edu.co>
+Date:   Wed Apr 24 21:58:04 2013 -0500
+
+    davilitado la imagen obligatoria en estudiantes
+
+commit 396b6afe4f4947f145b41c8103f3ca2861095f05
+Author: Andres Echeverri <andresecheverr@misena.edu.co>
+Date:   Wed Apr 24 20:57:43 2013 -0500
+
+    archivo de clave y modificacion en las rutas
+
+commit f4c9d48050f07e67ec6b656b3e472c7f616901c7
+Author: Andres Echeverri <andresecheverr@misena.edu.co>
+Date:   Wed Apr 24 17:23:04 2013 -0500
+
+    modificacion a materias en el modelo
+
+commit 66308c581dea36eabdab6916ceab3c163d13a8ad
+Author: Andres Echeverri <andresecheverr@misena.edu.co>
+Date:   Wed Apr 24 15:44:33 2013 -0500
+
+    actualizacion mas
+
+commit b7873da1ad49d9ebcd6adad458436b167f12cd9d
+Author: Andres Echeverri <andresecheverr@misena.edu.co>
+Date:   Wed Apr 24 15:26:37 2013 -0500
+
+    cambio README
+
+commit 372d85d2c42ce4a58f873b5f8ad413aaea838c7a
+Author: Dannyela Alvarez <dannymona@misena.edu.co>
+Date:   Wed Apr 24 15:13:34 2013 -0500
+
+    actualizacion al README
+
+commit a315c023a21e9e00b5eb229ac5d3266574193d6d
+Author: andres <andres.echeverri8@gmail.com>
+Date:   Mon Apr 22 14:15:49 2013 -0500
+
+    vercion beta crear con laxy
+
+commit ecd4cad242bfd11f7f5bd49b3ce2e1ee15916c85
+Author: andres <andres.echeverri8@gmail.com>
+Date:   Mon Apr 22 09:25:13 2013 -0500
+
+    version beta de PDF

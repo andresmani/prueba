@@ -1,0 +1,24 @@
+<br><br><br><br>
+<h1>Lista de Usuarios</h1>
+
+<table class="table table-hover table-bordered table-condensed pretty">
+  <tr>
+    <th>Emails</th>
+    <th>Nombre de Usuario</th>
+    <th>Roles</th>
+    <th></th>
+  </tr>
+
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.email %></td>
+      <td><%= user.username %></td>
+      <td></td>
+      <td><%= link_to 'Ver', user, :class=>"btn btn-mini btn-info" %>
+   <%= link_to 'Editar', edit_user_path(user), :class=>"btn btn-mini btn-warning" %>
+    <%= link_to 'Destroy', user, :confirm => '¿Desea elimiran la cuenta?', :method => :delete, :class=>"btn btn-mini btn-danger" %></td>
+    </tr>
+  <% end %>
+</table>
+ <%= link_to "Crear cuenta", signup_path, :class=>"btn btn-mini btn-primary" %>
+<br/>

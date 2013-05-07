@@ -1,6 +1,5 @@
 Guia3::Application.routes.draw do
-  get "pages/index"
-
+  
     resources :cursos do
     resources :estudiantes 
   end
@@ -11,12 +10,17 @@ Guia3::Application.routes.draw do
 
   
 
-  get "pages/index"
-    resources :cursos
-    resources :materias
-    resources :pages
-    resources :horarios, :pdf
-  root :to => 'pages#index'
+   get "pages/index"
+   get "logout" => "sessions#destroy", :as => "logout"
+   get "login" => "sessions#new", :as => "login"
+   get "signup" => "users#new", :as => "signup"
+   resources :users 
+   resources :sessions
+   resources :cursos
+   resources :materias
+   resources :pages
+   resources :horarios, :pdf
+   root :to => 'pages#index'
   
 
 

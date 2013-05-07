@@ -19,9 +19,7 @@ validates :nombre, :presence=>true,
 
   validates :direccion, :presence=>true
 
-  validates :telefono, :presence=>true,
-  :length => { :minimum => 7, :maximum => 20 },
-  :numericality => true
+
 
 
   def self.search(search)

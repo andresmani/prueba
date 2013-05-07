@@ -1,4 +1,5 @@
 class CursosController < ApplicationController
+    before_filter :require_login
     before_filter :find_curso, :except => [ :index, :create, :new ]
     helper_method :sort_column, :sort_direction
 
