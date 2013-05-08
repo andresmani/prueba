@@ -29,6 +29,10 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'action', 'actions'
   inflect.irregular 'User', 'Users'
   inflect.irregular 'Session', 'Sessions'
+  inflect.irregular 'role', 'roles'
+  
+  
+
 
 end
 

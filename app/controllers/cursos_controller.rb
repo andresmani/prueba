@@ -1,5 +1,7 @@
 class CursosController < ApplicationController
+  
     before_filter :require_login
+   load_and_authorize_resource :only => [:new, :edit, :destroy]
     before_filter :find_curso, :except => [ :index, :create, :new ]
     helper_method :sort_column, :sort_direction
 

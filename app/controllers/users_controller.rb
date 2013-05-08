@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
    before_filter :require_login
+
+   load_and_authorize_resource :readonly => [:show, :edit, :new, :destroy]
+  
   def index
     @users = User.all
 
