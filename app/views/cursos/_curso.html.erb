@@ -5,8 +5,7 @@
     <%= link_to 'Mostrar', curso, :remote => true, :class => 'btn btn-mini' %>
     <%= link_to 'Editar', edit_curso_path(curso), :remote => true,
         :class => 'btn btn-mini' %>
-    <%= link_to 'Eliminar', curso, 
-        :data => { :confirm => 'Esta Seguro?' },
+    <%= link_to 'Eliminar', curso, :data => { :confirm => 'Esta Seguro?' },
         :method => :delete, :remote => true, :class => 'btn btn-mini btn-danger' %>
   </td>
   <td><%= link_to 'Estudiantes', curso_estudiantes_path(curso), :class=>"btn btn-inverse"%></td>

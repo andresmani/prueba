@@ -2,12 +2,12 @@
 
   <%= f.error_notification %>
  
-
   <%= f.input :nombre %>
   <%= f.input :ficha %>
  
   <div class="form-actions">
     <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    
     <%= link_to 'Atras', cursos_path, :class => 'btn btn-small' %>
   </div>
 <% end %>

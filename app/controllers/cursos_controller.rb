@@ -45,8 +45,7 @@ def index
       @curso = Curso.find(params[:id]) if params[:id]
   end
  
-
-def sort_column
+  def sort_column
     Curso.column_names.include?(params[:sort]) ? params[:sort] : "nombre"
   end
   

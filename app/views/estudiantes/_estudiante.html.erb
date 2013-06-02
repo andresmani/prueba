@@ -13,8 +13,7 @@
 
   <%= link_to "Editar", edit_curso_estudiante_path(@curso,estudiante), :remote => true, :class => 'btn btn-danger btn-mini' %>
   
-  <%= link_to "eliminar", curso_estudiante_path(@curso, estudiante), 
-  :data => { :confirm => 'Esta Seguro?' },
+  <%= link_to "Eliminar", curso_estudiante_path(@curso, estudiante), :data => { :confirm => 'Esta Seguro?' },
   :method => :delete, :remote => true, :class => 'btn btn-mini btn-warning' %>
   </td>
 </tr>

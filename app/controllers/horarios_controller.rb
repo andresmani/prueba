@@ -22,13 +22,11 @@ class HorariosController < ApplicationController
   def show
       @horario = Horario.find(params[:id])   
 
-      respond_to do |format|
-        format.pdf do
+     if params[:format] == "pdf"
           pdf = HorarioPdf.new(@horario, view_context)
           send_data pdf.render, filename:
           "horario_#{@horario.id}.pdf", 
           type: "application/pdf"
-        end
       end
   end
 

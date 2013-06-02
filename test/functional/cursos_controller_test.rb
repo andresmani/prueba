@@ -5,7 +5,7 @@ class CursosControllerTest < ActionController::TestCase
     @curso = cursos(:one)
   end
 
-  test "should get index" do
+  def test_index
     get :index
     assert_response :success
     assert_not_nil assigns(:cursos)
@@ -16,8 +16,9 @@ class CursosControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should create curso" do
+  def test_curso
     assert_difference('Curso.count') do
+      assert_response :success
       post :create, curso: { ficha: @curso.ficha, nombre: @curso.nombre }
     end
 

@@ -8,7 +8,7 @@ class EstudiantesController < ApplicationController
   def index
     @nrp = (params[:registro] != nil)? params[:registro].to_i : 3
 
-   if ((@nrp) <= 0)
+   if ((@nrp) <= 3)
      @nrp = 3
    end
      
@@ -16,12 +16,6 @@ class EstudiantesController < ApplicationController
       respond_to do |format|
       format.html 
       format.xml { render :xml => @estudiantes }
-      format.pdf do
-         pdf = EstudiantePdf.new(@estudiante, view_context)
-        send_data pdf.render, filename:
-        "Persona_#{@estudiante.nombre}.pdf",
-        type: "application/pdf"
-      end 
     end
   end
 
@@ -32,6 +26,7 @@ class EstudiantesController < ApplicationController
   def create
      @estudiante = @curso.estudiante.build(params[:estudiante])
      render :action => :new unless @estudiante.save
+     @estudiantes = Estudiante.all
  end
 
   def update
@@ -41,8 +36,8 @@ class EstudiantesController < ApplicationController
 
   def destroy
     @estudiante = Estudiante.find(params[:id])
-      @estudiante.destroy
-      @estudiantes =Estudiante.all
+    @estudiante.destroy
+    @estudiantes =Estudiante.all
   end
 
   private

@@ -1,7 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  fecha: 2013-04-05
   hora: 2013-04-05 08:15:03
   aula: MyString
   materia: 
@@ -9,7 +8,6 @@ one:
   instructor: 
 
 two:
-  fecha: 2013-04-05
   hora: 2013-04-05 08:15:03
   aula: MyString
   materia: 

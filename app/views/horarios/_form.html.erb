@@ -7,7 +7,7 @@
 
   <%= f.input :aula, collection:["aula1","aula2","aula3"] %>
   
-  <!-- lixbox dependientes -->
+  <!-- coleccion lixbox  -->
   <%= f.label :materia  %>
   <%= f.collection_select :materia_id, Materia.all, :id, :nombre %><br><br>
   

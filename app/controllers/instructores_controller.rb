@@ -26,14 +26,13 @@ class InstructoresController < ApplicationController
   def create
    @instructor = @materia.instructor.new(params[:instructor])
    render :action => :new unless @instructor.save
+   @instructores = Instructor.all
  end
 
    def update
-   @instructor = Instructor.find(params[:id])
-   render :action => :edit unless @instructor.update_attributes(params[:instructor])
-instructor
-
- end
+     @instructor = Instructor.find(params[:id])
+     render :action => :edit unless @instructor.update_attributes(params[:instructor])
+  end
 
   def destroy
       @instructor = Instructor.find(params[:id])

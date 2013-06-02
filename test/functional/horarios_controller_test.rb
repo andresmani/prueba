@@ -18,7 +18,7 @@ class HorariosControllerTest < ActionController::TestCase
 
   test "should create horario" do
     assert_difference('Horario.count') do
-      post :create, horario: { aula: @horario.aula, fecha: @horario.fecha, hora: @horario.hora }
+      post :create, horario: { aula: @horario.aula, dia: @horario.dia, hora: @horario.hora }
     end
 
     assert_redirected_to horario_path(assigns(:horario))
@@ -35,7 +35,7 @@ class HorariosControllerTest < ActionController::TestCase
   end
 
   test "should update horario" do
-    put :update, id: @horario, horario: { aula: @horario.aula, fecha: @horario.fecha, hora: @horario.hora }
+    put :update, id: @horario, horario: { aula: @horario.aula, dia: @horario.dia, hora: @horario.hora }
     assert_redirected_to horario_path(assigns(:horario))
   end
 

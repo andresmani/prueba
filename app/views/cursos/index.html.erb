@@ -16,7 +16,7 @@
     <br>
 </div>
 
-<table class="table table-hover table-bordered table-condensed pretty">
+<table class="table table-hover table-bordered table-condensed pretty" id="inv">
   <thead>
     <tr>
       <th><%= sortable "ficha" %></th>
@@ -40,7 +40,7 @@
     <%= will_paginate @cursos, :previous_label => '&laquo; Anterior', :next_label => 'Siguiente
     &raquo;' %>
   </ul>
-  <p >
+  <p>
   <td>Total Cursos :<input type="text"  id="totalregs" class="span1" value="<%= @cursos.total_entries %>" readonly />
 </p>
 </div>

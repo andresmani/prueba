@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="shortcut icon" href="app/assets/images/tuxsen.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "guia3" %></title>
     <meta name="description" content="">
@@ -39,6 +38,7 @@
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
+    <br><br>
               <%= yield %>
             </div>
           </div>

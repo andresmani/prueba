@@ -2,6 +2,7 @@
 
   <%= f.error_notification %>
   
+  
   <%= f.file_field :imagen %>
   <%= f.input :nombre, :label => "Nombre"  %>
   <%= f.input :apellido, :label => "Apellido" %>
@@ -11,7 +12,8 @@
   <%= f.input :direccion, :label => "Direccion"  %>
   <br>
   <div class="form-actions">
-    <%= f.submit "guardar", :remote => true, :class => 'btn btn-primary' %>
+    <%= f.submit "guardar", :class => 'btn btn-primary' %>
+    
     <%= link_to "Atras", curso_estudiantes_path, :class => 'btn btn-small' %>
   </div>
 <% end %>

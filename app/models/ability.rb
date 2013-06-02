@@ -6,11 +6,8 @@ class Ability
         user ||= User.new # guest user (not logged in)
         if user.has_role? :admin
           can :manage, :all
-        else             
-        user ||= User.new # guest user (not logged in)
-        if user.has_role? :coordinador
+        elsif user.has_role? :coordinador
           can [:show, :new, :edit], :all
-        end 
     end
     #   user ||= User.new # guest user (not logged in)
     #   if user.admin?

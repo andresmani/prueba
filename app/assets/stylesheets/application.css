@@ -13,7 +13,7 @@
  *= require lazybox
 */
 
-#lazybox div.team { max-width: 500px; }
+#lazybox div.curso { max-width: 500px; }
 
 .lazybox {
   background: transparent !important;
@@ -81,3 +81,7 @@
 #msg{
   margin-top: 2%
 } 
+
+#ibv{
+  background: transparent;
+}

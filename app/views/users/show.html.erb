@@ -6,6 +6,7 @@
 <div class="team">
   <p><b>nombre de usuario:</b> <%=@user.username %></p>
   <p><b>Email:</b> <%= @user.email %></p>
+  <p><b>Rol:</b> <%= @user.roles_name %></p>
 </div>
 
 <%= link_to 'Editar', edit_user_path(@user), :class=>"btn btn-info btn-mini" %> 

@@ -13,7 +13,7 @@
     <tr>
       <td><%= user.email %></td>
       <td><%= user.username %></td>
-      <td><%= user.roles.name %></td>
+      <td><%= user.roles_name %></td>
       <td><%= link_to 'Ver', user, :class=>"btn btn-mini btn-info" %>
    <%= link_to 'Editar', edit_user_path(user), :class=>"btn btn-mini btn-warning" %>
     <%= link_to 'Destroy', user, :confirm => '¿Desea elimiran la cuenta?', :method => :delete, :class=>"btn btn-mini btn-danger" %></td>
